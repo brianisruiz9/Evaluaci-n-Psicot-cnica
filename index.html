@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EVALUACION</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="myscript.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Evaluación Psicotécnica</h1>
+		<p>Bienvenido, por favor diligencie toda la información y preguntas que se presentan a continuación:</p>
+	</div>
+	<div class="container">
+		<div class="row">
+			<form class="was-validated">
+				<div class="row">
+					<div class="col-sm-2">
+						<label for="id">Id*</label>
+						<input type="number" class="form-control" id="id" name="id"required="">
+					</div>
+					<div class="col-sm-3">
+						<label for="nombre">Nombre Completo*</label>
+						<input type="text" class="form-control" id="nombre" name="nombre" required>
+					</div>
+					<div class="col-sm-3">
+						<label for="correo">Correo electrónico*</label>
+						<input type="email" class="form-control" id="correo" name="correo" required="">
+					</div>
+					<div class="col-sm-2">
+						<label for="fecha">Fecha Nacimiento*</label>
+						<input type="date" class="form-control" id="fecha" name="fecha" required="">
+					</div>
+					<div class="col-sm-2">
+						<label for="cargo">Cargo*</label>
+						<select id="cargo" class="browser-default custom-select custom-select-lg mb-3">
+							<option value="operario">Operario</option>
+							<option value="supervisor">Supervisor</option>
+							<option value="auxiliar">Auxiliar</option>
+							<option value="director">Director</option>
+						</select>
+					</div>
+				</div>
+			</form>
+			<p>*El campo es obligatorio.</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<label for="p1">1. Si tuviera la posibilidad de elegir un curso, de que tipo elegiría:</label>
+				<select id="p1" class="browser-default custom-select custom-select-lg mb-3">
+				  <option value="artistico">Artístico</option>
+				  <option value="deportivo">Deportivo</option>
+				  <option value="social">Social</option>
+				  <option value="ninguno">Ninguno</option>
+				</select>
+				<label for="p2">2. Cercano al cumplimiento de una fecha de entrega que situación lo describe mejor a Ud:</label>
+				<select id="p2" class="browser-default custom-select custom-select-lg mb-3">
+				  <option value="relajarse">Relajarse y no hacer nada</option>
+				  <option value="trabajar">Trabajar hasta cumplir el objetivo</option>
+				  <option value="stress">No puedo trabajar por el stress</option>
+				  <option value="tiempo">Prefiero terminar antes de tiempo</option>
+				</select>
+				<label for="p3">3. Con qué frecuencia consume bebidas alcohólicas:</label>
+				<select id="p3" class="browser-default custom-select custom-select-lg mb-3">
+				  <option value="1">1 vez por semana</option>
+				  <option value="2">2 veces por semana</option>
+				  <option value="3">3 veces por semana</option>
+				  <option value="4">Más de 3 veces por semana</option>
+				</select>
+				<label for="p4">4. Que deporte practica con mayor regularidad:</label>
+				<select id="p4" class="browser-default custom-select custom-select-lg mb-3">
+				  <option value="futbol">Futbol</option>
+				  <option value="baloncesto">Baloncesto</option>
+				  <option value="otro">Otro</option>
+				  <option value="no">No practico ningún deporte</option>
+				</select>
+			</div>
+			<div class="col-sm-6">
+				<label for="p5">5. En un equipo de trabajo con que rol se siente más a gusto:</label>
+				<select id="p5" class="browser-default custom-select custom-select-lg mb-3">
+				  <option value="lider">Líder</option>
+				  <option value="ejecutor">Ejecutor</option>
+				  <option value="apoyo">Apoyo</option>
+				  <option value="no">No quiere trabajar</option>
+				</select>
+				<label for="p6">6. En que tipo de vivienda reside actualmente:</label>
+				<select id="p6" class="browser-default custom-select custom-select-lg mb-3">
+				  <option value="propia">Propia</option>
+				  <option value="arrendada">Arrendada</option>
+				  <option value="familiar">Familiar</option>
+				  <option value="otro">Otro</option>
+				</select>
+				<label for="p7">7. Cuantas personas habitan en su residencia:</label>
+				<select id="p7" class="browser-default custom-select custom-select-lg mb-3">
+				  <option value="1">De 1 a 2</option>
+				  <option value="2">De 2 a 4</option>
+				  <option value="3">De 5 a 7</option>
+				  <option value="4">7</option>
+				</select>
+			</div>
+			<button onclick="myfunction()" class="btn btn-success">Continuar</button>
+		</div>
+	</div>
+	<div class="container">
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<tr>
+					<th>Id</th>
+					<th>Nombres</th>
+					<th>Correo</th>
+					<th>Fecha</th>
+					<th>Cargo</th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>Resultado</th>
+				</tr>
+				<tr>
+					<tbody id="table"></tbody>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
